@@ -22,14 +22,13 @@ module Middleman
 
       def do_ping(thor)
         raise 'Please set the `host` option for the sitemap ping extension!' unless host = options.host
-        require 'open-uri'
         host = "http://#{host}" unless host =~ %r(\Ahttps?://)
         sitemap_url = File.join(host, options.sitemap_file)
         SERVICES.each do |service, url|
           next unless options.send("ping_#{service}")
           url.sub! /%SITEMAP_URL%\z/, CGI.escape(sitemap_url)
           thor.say "Pinging #{url}"
-          open url do |f|
+          URI(url).open do |f|
             if f.status[0] == '200'
               thor.say_status :success, 'SUCCESS!', :green
             else
