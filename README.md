@@ -3,6 +3,10 @@
 [![Gem Version](https://badge.fury.io/rb/middleman-sitemap-ping.png)](http://badge.fury.io/rb/middleman-sitemap-ping)
 [![Build Status](https://secure.travis-ci.org/bootstrap-ruby/middleman-bootstrap-navbar.png)](https://travis-ci.org/krautcomputing/middleman-sitemap-ping)
 
+> ⚠️ **Deprecated**: since both [Bing](https://blogs.bing.com/webmaster/may-2022/Spring-cleaning-Removed-Bing-anonymous-sitemap-sub) and [Google](https://developers.google.com/search/blog/2023/06/sitemaps-lastmod-ping) killed their public sitemap-ping endpoints, this gem doesn't work anymore. This fork won't be maintained anymore.
+>
+> Don't use it.
+
 [Middleman](https://middlemanapp.com/) extension to ping search engines (Google and Bing) with a sitemap URL
 
 ## Installation
